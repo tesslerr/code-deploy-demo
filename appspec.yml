@@ -10,15 +10,20 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: root
+
 # DownloadBundle:
+
   BeforeInstall:
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
+
 # Install:
 # AfterInstall:
+
   ApplicationStart:
     - location: scripts/start_server
       timeout: 300
       runas: root
+      
 # ValidateService:
